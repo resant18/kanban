@@ -1,53 +1,20 @@
-<testsuites name="jest tests" tests="6" failures="6" time="1.646">
-  <testsuite name="undefined" errors="0" failures="6" skipped="0" timestamp="2020-03-13T17:33:59" time="1.646" tests="6">
-    <testcase classname=" Renders all columns with heading" name=" Renders all columns with heading" time="0.026">
-      <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0&quot;]
-
-&lt;body&gt;
-  &lt;div&gt;
-    &lt;div
-      class=&quot;App&quot;
-    &gt;
-      &lt;h1&gt;
-        Kanban board
-      &lt;/h1&gt;
-      &lt;div
-        style=&quot;display: flex;&quot;
-      /&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/body&gt;
-    at getElementError (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:46:10)
-    at args (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:100:13)
-    at args (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:83:17)
-    at Object.&lt;anonymous&gt;.test (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/src/App.test.js:60:17)
-    at Object.asyncFn (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
-    at resolve (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/jest-jasmine2/build/queueRunner.js:38:12)
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/jest-jasmine2/build/queueRunner.js:31:21)
-    at Promise.resolve.then.el (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/p-map/index.js:46:16)
-    at &lt;anonymous&gt;
-    at process._tickCallback (internal/process/next_tick.js:118:7)</failure>
+<testsuites name="jest tests" tests="6" failures="5" time="1.472">
+  <testsuite name="undefined" errors="0" failures="5" skipped="0" timestamp="2020-03-13T18:29:11" time="1.472" tests="6">
+    <testcase classname=" Renders all columns with heading" name=" Renders all columns with heading" time="0.035">
     </testcase>
-    <testcase classname=" Renders a given set of tasks" name=" Renders a given set of tasks" time="0.003">
-      <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0&quot;]
+    <testcase classname=" Renders a given set of tasks" name=" Renders a given set of tasks" time="0.008">
+      <failure>Error: Unable to find an element by: [data-testid=&quot;task-task-1&quot;]
 
-&lt;div&gt;
-  &lt;div
-    class=&quot;App&quot;
-  &gt;
-    &lt;h1&gt;
-      Kanban board
-    &lt;/h1&gt;
-    &lt;div
-      style=&quot;display: flex;&quot;
-    /&gt;
-  &lt;/div&gt;
+&lt;div
+  class=&quot;board&quot;
+  data-testid=&quot;stage-0&quot;
+&gt;
+  Backlog
 &lt;/div&gt;
     at getElementError (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:46:10)
     at args (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:100:13)
     at args (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:83:17)
-    at Object.&lt;anonymous&gt;.test (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/src/App.test.js:69:40)
+    at Object.&lt;anonymous&gt;.test (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/src/App.test.js:73:41)
     at Object.asyncFn (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
     at resolve (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/jest-jasmine2/build/queueRunner.js:38:12)
     at new Promise (&lt;anonymous&gt;)
@@ -68,8 +35,33 @@
         Kanban board
       &lt;/h1&gt;
       &lt;div
-        style=&quot;display: flex;&quot;
-      /&gt;
+        class=&quot;board-wrapper&quot;
+      &gt;
+        &lt;div
+          class=&quot;board&quot;
+          data-testid=&quot;stage-0&quot;
+        &gt;
+          Backlog
+        &lt;/div&gt;
+        &lt;div
+          class=&quot;board&quot;
+          data-testid=&quot;stage-1&quot;
+        &gt;
+          To Do
+        &lt;/div&gt;
+        &lt;div
+          class=&quot;board&quot;
+          data-testid=&quot;stage-2&quot;
+        &gt;
+          Ongoing
+        &lt;/div&gt;
+        &lt;div
+          class=&quot;board&quot;
+          data-testid=&quot;stage-3&quot;
+        &gt;
+          Done
+        &lt;/div&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/body&gt;
@@ -98,8 +90,33 @@
         Kanban board
       &lt;/h1&gt;
       &lt;div
-        style=&quot;display: flex;&quot;
-      /&gt;
+        class=&quot;board-wrapper&quot;
+      &gt;
+        &lt;div
+          class=&quot;board&quot;
+          data-testid=&quot;stage-0&quot;
+        &gt;
+          Backlog
+        &lt;/div&gt;
+        &lt;div
+          class=&quot;board&quot;
+          data-testid=&quot;stage-1&quot;
+        &gt;
+          To Do
+        &lt;/div&gt;
+        &lt;div
+          class=&quot;board&quot;
+          data-testid=&quot;stage-2&quot;
+        &gt;
+          Ongoing
+        &lt;/div&gt;
+        &lt;div
+          class=&quot;board&quot;
+          data-testid=&quot;stage-3&quot;
+        &gt;
+          Done
+        &lt;/div&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/body&gt;
@@ -116,7 +133,7 @@
     at &lt;anonymous&gt;
     at process._tickCallback (internal/process/next_tick.js:118:7)</failure>
     </testcase>
-    <testcase classname=" Deleting Tasks" name=" Deleting Tasks" time="0.002">
+    <testcase classname=" Deleting Tasks" name=" Deleting Tasks" time="0.003">
       <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0-add-button&quot;]
 
 &lt;body&gt;
@@ -128,8 +145,33 @@
         Kanban board
       &lt;/h1&gt;
       &lt;div
-        style=&quot;display: flex;&quot;
-      /&gt;
+        class=&quot;board-wrapper&quot;
+      &gt;
+        &lt;div
+          class=&quot;board&quot;
+          data-testid=&quot;stage-0&quot;
+        &gt;
+          Backlog
+        &lt;/div&gt;
+        &lt;div
+          class=&quot;board&quot;
+          data-testid=&quot;stage-1&quot;
+        &gt;
+          To Do
+        &lt;/div&gt;
+        &lt;div
+          class=&quot;board&quot;
+          data-testid=&quot;stage-2&quot;
+        &gt;
+          Ongoing
+        &lt;/div&gt;
+        &lt;div
+          class=&quot;board&quot;
+          data-testid=&quot;stage-3&quot;
+        &gt;
+          Done
+        &lt;/div&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/body&gt;
@@ -158,8 +200,33 @@
         Kanban board
       &lt;/h1&gt;
       &lt;div
-        style=&quot;display: flex;&quot;
-      /&gt;
+        class=&quot;board-wrapper&quot;
+      &gt;
+        &lt;div
+          class=&quot;board&quot;
+          data-testid=&quot;stage-0&quot;
+        &gt;
+          Backlog
+        &lt;/div&gt;
+        &lt;div
+          class=&quot;board&quot;
+          data-testid=&quot;stage-1&quot;
+        &gt;
+          To Do
+        &lt;/div&gt;
+        &lt;div
+          class=&quot;board&quot;
+          data-testid=&quot;stage-2&quot;
+        &gt;
+          Ongoing
+        &lt;/div&gt;
+        &lt;div
+          class=&quot;board&quot;
+          data-testid=&quot;stage-3&quot;
+        &gt;
+          Done
+        &lt;/div&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/body&gt;

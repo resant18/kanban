@@ -12,7 +12,11 @@ const Stage = ({ name, stageId }) => {
   const moveRightButtonTestId = `${stageTestId}-move-right`;
   const deleteButtonTestId = `${stageTestId}-delete`;
 
-  return <div data-testid={stageTestId}>Stage</div>;
+  return (
+     <div data-testid={stageTestId} className='board'>
+        {name}
+     </div>
+  );
 };
 
 export default Stage;
