@@ -10,19 +10,27 @@ export const STAGE_NAMES = ["Backlog", "To Do", "Ongoing", "Done"];
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+
+    };
   }
 
   render() {
     return (
-      <div className="App">
-        <h1>Kanban board</h1>
-        <div
-          style={{
-            display: "flex"
-          }}
-        ></div>
-      </div>
+       <div className='App'>
+          <h1>Kanban board</h1>
+          <div
+             style={{
+                display: "flex"
+             }}
+          >
+             {STAGE_NAMES.map((stage, idx) => (
+                <div key={idx}>
+                   <h3>{stage}</h3>
+                </div>
+             ))}
+          </div>
+       </div>
     );
   }
 }

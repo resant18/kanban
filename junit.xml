@@ -1,0 +1,180 @@
+<testsuites name="jest tests" tests="6" failures="6" time="1.646">
+  <testsuite name="undefined" errors="0" failures="6" skipped="0" timestamp="2020-03-13T17:33:59" time="1.646" tests="6">
+    <testcase classname=" Renders all columns with heading" name=" Renders all columns with heading" time="0.026">
+      <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0&quot;]
+
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;div
+      class=&quot;App&quot;
+    &gt;
+      &lt;h1&gt;
+        Kanban board
+      &lt;/h1&gt;
+      &lt;div
+        style=&quot;display: flex;&quot;
+      /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+    at getElementError (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:46:10)
+    at args (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:100:13)
+    at args (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:83:17)
+    at Object.&lt;anonymous&gt;.test (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/src/App.test.js:60:17)
+    at Object.asyncFn (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
+    at resolve (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/jest-jasmine2/build/queueRunner.js:38:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/jest-jasmine2/build/queueRunner.js:31:21)
+    at Promise.resolve.then.el (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/p-map/index.js:46:16)
+    at &lt;anonymous&gt;
+    at process._tickCallback (internal/process/next_tick.js:118:7)</failure>
+    </testcase>
+    <testcase classname=" Renders a given set of tasks" name=" Renders a given set of tasks" time="0.003">
+      <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0&quot;]
+
+&lt;div&gt;
+  &lt;div
+    class=&quot;App&quot;
+  &gt;
+    &lt;h1&gt;
+      Kanban board
+    &lt;/h1&gt;
+    &lt;div
+      style=&quot;display: flex;&quot;
+    /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    at getElementError (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:46:10)
+    at args (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:100:13)
+    at args (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:83:17)
+    at Object.&lt;anonymous&gt;.test (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/src/App.test.js:69:40)
+    at Object.asyncFn (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
+    at resolve (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/jest-jasmine2/build/queueRunner.js:38:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/jest-jasmine2/build/queueRunner.js:31:21)
+    at Promise.resolve.then.el (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/p-map/index.js:46:16)
+    at &lt;anonymous&gt;
+    at process._tickCallback (internal/process/next_tick.js:118:7)</failure>
+    </testcase>
+    <testcase classname=" Adding Tasks" name=" Adding Tasks" time="0.004">
+      <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0-add-button&quot;]
+
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;div
+      class=&quot;App&quot;
+    &gt;
+      &lt;h1&gt;
+        Kanban board
+      &lt;/h1&gt;
+      &lt;div
+        style=&quot;display: flex;&quot;
+      /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+    at getElementError (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:46:10)
+    at args (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:100:13)
+    at args (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:83:17)
+    at renderAppAndAddTasks (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/src/App.test.js:22:23)
+    at Object.&lt;anonymous&gt;.test (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/src/App.test.js:87:3)
+    at Object.asyncFn (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
+    at resolve (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/jest-jasmine2/build/queueRunner.js:38:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/jest-jasmine2/build/queueRunner.js:31:21)
+    at Promise.resolve.then.el (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/p-map/index.js:46:16)
+    at &lt;anonymous&gt;
+    at process._tickCallback (internal/process/next_tick.js:118:7)</failure>
+    </testcase>
+    <testcase classname=" Selecting and Deselecting Tasks" name=" Selecting and Deselecting Tasks" time="0.003">
+      <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0-add-button&quot;]
+
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;div
+      class=&quot;App&quot;
+    &gt;
+      &lt;h1&gt;
+        Kanban board
+      &lt;/h1&gt;
+      &lt;div
+        style=&quot;display: flex;&quot;
+      /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+    at getElementError (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:46:10)
+    at args (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:100:13)
+    at args (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:83:17)
+    at renderAppAndAddTasks (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/src/App.test.js:22:23)
+    at Object.&lt;anonymous&gt;.test (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/src/App.test.js:97:3)
+    at Object.asyncFn (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
+    at resolve (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/jest-jasmine2/build/queueRunner.js:38:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/jest-jasmine2/build/queueRunner.js:31:21)
+    at Promise.resolve.then.el (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/p-map/index.js:46:16)
+    at &lt;anonymous&gt;
+    at process._tickCallback (internal/process/next_tick.js:118:7)</failure>
+    </testcase>
+    <testcase classname=" Deleting Tasks" name=" Deleting Tasks" time="0.002">
+      <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0-add-button&quot;]
+
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;div
+      class=&quot;App&quot;
+    &gt;
+      &lt;h1&gt;
+        Kanban board
+      &lt;/h1&gt;
+      &lt;div
+        style=&quot;display: flex;&quot;
+      /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+    at getElementError (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:46:10)
+    at args (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:100:13)
+    at args (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:83:17)
+    at renderAppAndAddTasks (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/src/App.test.js:22:23)
+    at Object.&lt;anonymous&gt;.test (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/src/App.test.js:111:3)
+    at Object.asyncFn (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
+    at resolve (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/jest-jasmine2/build/queueRunner.js:38:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/jest-jasmine2/build/queueRunner.js:31:21)
+    at Promise.resolve.then.el (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/p-map/index.js:46:16)
+    at &lt;anonymous&gt;
+    at process._tickCallback (internal/process/next_tick.js:118:7)</failure>
+    </testcase>
+    <testcase classname=" Moving Tasks" name=" Moving Tasks" time="0.003">
+      <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0-add-button&quot;]
+
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;div
+      class=&quot;App&quot;
+    &gt;
+      &lt;h1&gt;
+        Kanban board
+      &lt;/h1&gt;
+      &lt;div
+        style=&quot;display: flex;&quot;
+      /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+    at getElementError (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:46:10)
+    at args (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:100:13)
+    at args (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:83:17)
+    at renderAppAndAddTasks (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/src/App.test.js:22:23)
+    at Object.&lt;anonymous&gt;.test (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/src/App.test.js:127:3)
+    at Object.asyncFn (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
+    at resolve (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/jest-jasmine2/build/queueRunner.js:38:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/jest-jasmine2/build/queueRunner.js:31:21)
+    at Promise.resolve.then.el (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/p-map/index.js:46:16)
+    at &lt;anonymous&gt;
+    at process._tickCallback (internal/process/next_tick.js:118:7)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>
