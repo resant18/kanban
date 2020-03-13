@@ -28,3 +28,16 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.board-wrapper {
+  display: flex;  
+  width: 800px;
+  margin: 0 auto;
+}
+
+.board {
+    border: 1px solid #cccccc;
+    width: 200px;
+    margin-right: 20px;
+    background-color: #fbfafa;
+}

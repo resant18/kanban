@@ -19,13 +19,9 @@ class App extends Component {
     return (
        <div className='App'>
           <h1>Kanban board</h1>
-          <div
-             style={{
-                display: "flex"
-             }}
-          >
+          <div className="board-wrapper">
              {STAGE_NAMES.map((stage, idx) => (
-                <div key={idx}>
+                <div key={idx} className="board">
                    <h3>{stage}</h3>
                 </div>
              ))}
