@@ -6,7 +6,7 @@ const Task = ({ name }) => {
   const taskTestId = `task-${name.split(" ").join("-")}`;
     
   return (
-    <div data-testid={taskTestId}></div>
+    <div data-testid={taskTestId}>{name}</div>
   );
 };
 

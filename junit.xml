@@ -1,8 +1,8 @@
-<testsuites name="jest tests" tests="6" failures="5" time="1.472">
-  <testsuite name="undefined" errors="0" failures="5" skipped="0" timestamp="2020-03-13T18:29:11" time="1.472" tests="6">
-    <testcase classname=" Renders all columns with heading" name=" Renders all columns with heading" time="0.035">
+<testsuites name="jest tests" tests="6" failures="5" time="2.303">
+  <testsuite name="undefined" errors="0" failures="5" skipped="0" timestamp="2020-04-09T16:53:20" time="2.303" tests="6">
+    <testcase classname=" Renders all columns with heading" name=" Renders all columns with heading" time="0.051">
     </testcase>
-    <testcase classname=" Renders a given set of tasks" name=" Renders a given set of tasks" time="0.008">
+    <testcase classname=" Renders a given set of tasks" name=" Renders a given set of tasks" time="0.016">
       <failure>Error: Unable to find an element by: [data-testid=&quot;task-task-1&quot;]
 
 &lt;div
@@ -10,6 +10,30 @@
   data-testid=&quot;stage-0&quot;
 &gt;
   Backlog
+  &lt;div
+    data-testid=&quot;task-Task-1&quot;
+  &gt;
+    Task 1
+  &lt;/div&gt;
+  &lt;div
+    data-testid=&quot;task-Task-2&quot;
+  &gt;
+    Task 2
+  &lt;/div&gt;
+  &lt;div
+    class=&quot;add-task-form&quot;
+  &gt;
+    &lt;button
+      class=&quot;bp3-button&quot;
+      type=&quot;button&quot;
+    &gt;
+      &lt;span
+        class=&quot;bp3-button-text&quot;
+      &gt;
+        Add a Task
+      &lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
     at getElementError (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:46:10)
     at args (/Users/resant/AppAcademy/instabase/f54897e5-bb29-4996-83af-869015247435/node_modules/@testing-library/dom/dist/query-helpers.js:100:13)
@@ -23,7 +47,7 @@
     at &lt;anonymous&gt;
     at process._tickCallback (internal/process/next_tick.js:118:7)</failure>
     </testcase>
-    <testcase classname=" Adding Tasks" name=" Adding Tasks" time="0.004">
+    <testcase classname=" Adding Tasks" name=" Adding Tasks" time="0.017">
       <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0-add-button&quot;]
 
 &lt;body&gt;
@@ -35,31 +59,107 @@
         Kanban board
       &lt;/h1&gt;
       &lt;div
-        class=&quot;board-wrapper&quot;
+        class=&quot;stages-wrapper&quot;
       &gt;
         &lt;div
           class=&quot;board&quot;
           data-testid=&quot;stage-0&quot;
         &gt;
           Backlog
+          &lt;div
+            data-testid=&quot;task-Task-1&quot;
+          &gt;
+            Task 1
+          &lt;/div&gt;
+          &lt;div
+            data-testid=&quot;task-Task-2&quot;
+          &gt;
+            Task 2
+          &lt;/div&gt;
+          &lt;div
+            class=&quot;add-task-form&quot;
+          &gt;
+            &lt;button
+              class=&quot;bp3-button&quot;
+              type=&quot;button&quot;
+            &gt;
+              &lt;span
+                class=&quot;bp3-button-text&quot;
+              &gt;
+                Add a Task
+              &lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
         &lt;div
           class=&quot;board&quot;
           data-testid=&quot;stage-1&quot;
         &gt;
           To Do
+          &lt;div
+            data-testid=&quot;task-Task-3&quot;
+          &gt;
+            Task 3
+          &lt;/div&gt;
+          &lt;div
+            class=&quot;add-task-form&quot;
+          &gt;
+            &lt;button
+              class=&quot;bp3-button&quot;
+              type=&quot;button&quot;
+            &gt;
+              &lt;span
+                class=&quot;bp3-button-text&quot;
+              &gt;
+                Add a Task
+              &lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
         &lt;div
           class=&quot;board&quot;
           data-testid=&quot;stage-2&quot;
         &gt;
           Ongoing
+          &lt;div
+            data-testid=&quot;task-Task-4&quot;
+          &gt;
+            Task 4
+          &lt;/div&gt;
+          &lt;div
+            class=&quot;add-task-form&quot;
+          &gt;
+            &lt;button
+              class=&quot;bp3-button&quot;
+              type=&quot;button&quot;
+            &gt;
+              &lt;span
+                class=&quot;bp3-button-text&quot;
+              &gt;
+                Add a Task
+              &lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
         &lt;div
           class=&quot;board&quot;
           data-testid=&quot;stage-3&quot;
         &gt;
           Done
+          &lt;div
+            class=&quot;add-task-form&quot;
+          &gt;
+            &lt;button
+              class=&quot;bp3-button&quot;
+              type=&quot;button&quot;
+            &gt;
+              &lt;span
+                class=&quot;bp3-button-text&quot;
+              &gt;
+                Add a Task
+              &lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -78,7 +178,7 @@
     at &lt;anonymous&gt;
     at process._tickCallback (internal/process/next_tick.js:118:7)</failure>
     </testcase>
-    <testcase classname=" Selecting and Deselecting Tasks" name=" Selecting and Deselecting Tasks" time="0.003">
+    <testcase classname=" Selecting and Deselecting Tasks" name=" Selecting and Deselecting Tasks" time="0.015">
       <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0-add-button&quot;]
 
 &lt;body&gt;
@@ -90,31 +190,107 @@
         Kanban board
       &lt;/h1&gt;
       &lt;div
-        class=&quot;board-wrapper&quot;
+        class=&quot;stages-wrapper&quot;
       &gt;
         &lt;div
           class=&quot;board&quot;
           data-testid=&quot;stage-0&quot;
         &gt;
           Backlog
+          &lt;div
+            data-testid=&quot;task-Task-1&quot;
+          &gt;
+            Task 1
+          &lt;/div&gt;
+          &lt;div
+            data-testid=&quot;task-Task-2&quot;
+          &gt;
+            Task 2
+          &lt;/div&gt;
+          &lt;div
+            class=&quot;add-task-form&quot;
+          &gt;
+            &lt;button
+              class=&quot;bp3-button&quot;
+              type=&quot;button&quot;
+            &gt;
+              &lt;span
+                class=&quot;bp3-button-text&quot;
+              &gt;
+                Add a Task
+              &lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
         &lt;div
           class=&quot;board&quot;
           data-testid=&quot;stage-1&quot;
         &gt;
           To Do
+          &lt;div
+            data-testid=&quot;task-Task-3&quot;
+          &gt;
+            Task 3
+          &lt;/div&gt;
+          &lt;div
+            class=&quot;add-task-form&quot;
+          &gt;
+            &lt;button
+              class=&quot;bp3-button&quot;
+              type=&quot;button&quot;
+            &gt;
+              &lt;span
+                class=&quot;bp3-button-text&quot;
+              &gt;
+                Add a Task
+              &lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
         &lt;div
           class=&quot;board&quot;
           data-testid=&quot;stage-2&quot;
         &gt;
           Ongoing
+          &lt;div
+            data-testid=&quot;task-Task-4&quot;
+          &gt;
+            Task 4
+          &lt;/div&gt;
+          &lt;div
+            class=&quot;add-task-form&quot;
+          &gt;
+            &lt;button
+              class=&quot;bp3-button&quot;
+              type=&quot;button&quot;
+            &gt;
+              &lt;span
+                class=&quot;bp3-button-text&quot;
+              &gt;
+                Add a Task
+              &lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
         &lt;div
           class=&quot;board&quot;
           data-testid=&quot;stage-3&quot;
         &gt;
           Done
+          &lt;div
+            class=&quot;add-task-form&quot;
+          &gt;
+            &lt;button
+              class=&quot;bp3-button&quot;
+              type=&quot;button&quot;
+            &gt;
+              &lt;span
+                class=&quot;bp3-button-text&quot;
+              &gt;
+                Add a Task
+              &lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -133,7 +309,7 @@
     at &lt;anonymous&gt;
     at process._tickCallback (internal/process/next_tick.js:118:7)</failure>
     </testcase>
-    <testcase classname=" Deleting Tasks" name=" Deleting Tasks" time="0.003">
+    <testcase classname=" Deleting Tasks" name=" Deleting Tasks" time="0.01">
       <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0-add-button&quot;]
 
 &lt;body&gt;
@@ -145,31 +321,107 @@
         Kanban board
       &lt;/h1&gt;
       &lt;div
-        class=&quot;board-wrapper&quot;
+        class=&quot;stages-wrapper&quot;
       &gt;
         &lt;div
           class=&quot;board&quot;
           data-testid=&quot;stage-0&quot;
         &gt;
           Backlog
+          &lt;div
+            data-testid=&quot;task-Task-1&quot;
+          &gt;
+            Task 1
+          &lt;/div&gt;
+          &lt;div
+            data-testid=&quot;task-Task-2&quot;
+          &gt;
+            Task 2
+          &lt;/div&gt;
+          &lt;div
+            class=&quot;add-task-form&quot;
+          &gt;
+            &lt;button
+              class=&quot;bp3-button&quot;
+              type=&quot;button&quot;
+            &gt;
+              &lt;span
+                class=&quot;bp3-button-text&quot;
+              &gt;
+                Add a Task
+              &lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
         &lt;div
           class=&quot;board&quot;
           data-testid=&quot;stage-1&quot;
         &gt;
           To Do
+          &lt;div
+            data-testid=&quot;task-Task-3&quot;
+          &gt;
+            Task 3
+          &lt;/div&gt;
+          &lt;div
+            class=&quot;add-task-form&quot;
+          &gt;
+            &lt;button
+              class=&quot;bp3-button&quot;
+              type=&quot;button&quot;
+            &gt;
+              &lt;span
+                class=&quot;bp3-button-text&quot;
+              &gt;
+                Add a Task
+              &lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
         &lt;div
           class=&quot;board&quot;
           data-testid=&quot;stage-2&quot;
         &gt;
           Ongoing
+          &lt;div
+            data-testid=&quot;task-Task-4&quot;
+          &gt;
+            Task 4
+          &lt;/div&gt;
+          &lt;div
+            class=&quot;add-task-form&quot;
+          &gt;
+            &lt;button
+              class=&quot;bp3-button&quot;
+              type=&quot;button&quot;
+            &gt;
+              &lt;span
+                class=&quot;bp3-button-text&quot;
+              &gt;
+                Add a Task
+              &lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
         &lt;div
           class=&quot;board&quot;
           data-testid=&quot;stage-3&quot;
         &gt;
           Done
+          &lt;div
+            class=&quot;add-task-form&quot;
+          &gt;
+            &lt;button
+              class=&quot;bp3-button&quot;
+              type=&quot;button&quot;
+            &gt;
+              &lt;span
+                class=&quot;bp3-button-text&quot;
+              &gt;
+                Add a Task
+              &lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -188,7 +440,7 @@
     at &lt;anonymous&gt;
     at process._tickCallback (internal/process/next_tick.js:118:7)</failure>
     </testcase>
-    <testcase classname=" Moving Tasks" name=" Moving Tasks" time="0.003">
+    <testcase classname=" Moving Tasks" name=" Moving Tasks" time="0.015">
       <failure>Error: Unable to find an element by: [data-testid=&quot;stage-0-add-button&quot;]
 
 &lt;body&gt;
@@ -200,31 +452,107 @@
         Kanban board
       &lt;/h1&gt;
       &lt;div
-        class=&quot;board-wrapper&quot;
+        class=&quot;stages-wrapper&quot;
       &gt;
         &lt;div
           class=&quot;board&quot;
           data-testid=&quot;stage-0&quot;
         &gt;
           Backlog
+          &lt;div
+            data-testid=&quot;task-Task-1&quot;
+          &gt;
+            Task 1
+          &lt;/div&gt;
+          &lt;div
+            data-testid=&quot;task-Task-2&quot;
+          &gt;
+            Task 2
+          &lt;/div&gt;
+          &lt;div
+            class=&quot;add-task-form&quot;
+          &gt;
+            &lt;button
+              class=&quot;bp3-button&quot;
+              type=&quot;button&quot;
+            &gt;
+              &lt;span
+                class=&quot;bp3-button-text&quot;
+              &gt;
+                Add a Task
+              &lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
         &lt;div
           class=&quot;board&quot;
           data-testid=&quot;stage-1&quot;
         &gt;
           To Do
+          &lt;div
+            data-testid=&quot;task-Task-3&quot;
+          &gt;
+            Task 3
+          &lt;/div&gt;
+          &lt;div
+            class=&quot;add-task-form&quot;
+          &gt;
+            &lt;button
+              class=&quot;bp3-button&quot;
+              type=&quot;button&quot;
+            &gt;
+              &lt;span
+                class=&quot;bp3-button-text&quot;
+              &gt;
+                Add a Task
+              &lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
         &lt;div
           class=&quot;board&quot;
           data-testid=&quot;stage-2&quot;
         &gt;
           Ongoing
+          &lt;div
+            data-testid=&quot;task-Task-4&quot;
+          &gt;
+            Task 4
+          &lt;/div&gt;
+          &lt;div
+            class=&quot;add-task-form&quot;
+          &gt;
+            &lt;button
+              class=&quot;bp3-button&quot;
+              type=&quot;button&quot;
+            &gt;
+              &lt;span
+                class=&quot;bp3-button-text&quot;
+              &gt;
+                Add a Task
+              &lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
         &lt;div
           class=&quot;board&quot;
           data-testid=&quot;stage-3&quot;
         &gt;
           Done
+          &lt;div
+            class=&quot;add-task-form&quot;
+          &gt;
+            &lt;button
+              class=&quot;bp3-button&quot;
+              type=&quot;button&quot;
+            &gt;
+              &lt;span
+                class=&quot;bp3-button-text&quot;
+              &gt;
+                Add a Task
+              &lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;

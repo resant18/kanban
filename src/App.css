@@ -29,7 +29,7 @@
   to { transform: rotate(360deg); }
 }
 
-.board-wrapper {
+.stages-wrapper {
   display: flex;  
   width: 800px;
   margin: 0 auto;
