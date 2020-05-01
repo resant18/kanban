@@ -52,7 +52,7 @@ class App extends Component {
   }
 
   addTask = (taskText, stageIdx) => {
-    const taskList = this.state.stages;
+    const taskList = [...this.state.stages]; // don't mutate 
 
     const newTask = {
       taskId: stageIdx,
@@ -67,7 +67,11 @@ class App extends Component {
   render() {
     const stages = this.state.stages.map((stage, idx) => (
       //  <Card className=''>
-          <Stage {...stage} key={idx} stageStageId={idx} onAddTask={(taskText, stageId) => this.addTask(taskText, stageId)}/>
+          <Stage {...stage} key={idx} stageStageId={idx} 
+            onAddTask={(taskText, stageId) => { 
+              console.log(taskText); 
+              this.addTask(taskText, stageId) }
+            }/>
       //  </Card>
     ));
     return (
