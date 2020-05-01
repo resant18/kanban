@@ -19,10 +19,10 @@ class App extends Component {
           stageId: 0,
           name: "Backlog",
           tasks: [{
-            taskId: 1,
+            // taskId: 1,
             taskText: "Task 1"
           }, {
-            taskId: 2,
+            // taskId: 2,
             taskText: "Task 2"
           }]
         },
@@ -30,7 +30,7 @@ class App extends Component {
           stageId: 1,
           name: "To Do",
           tasks: [{
-            taskId: 3,
+            // taskId: 3,
             taskText: "Task 3"
           }]
         },
@@ -38,7 +38,7 @@ class App extends Component {
           stageId: 2,
           name: "Ongoing",
           tasks: [{
-            taskId: 4,
+            // taskId: 4,
             taskText: "Task 4"
           }]
         },
@@ -55,23 +55,35 @@ class App extends Component {
     const taskList = [...this.state.stages]; // don't mutate 
 
     const newTask = {
-      taskId: stageIdx,
+      // taskId: stageIdx,
       taskText: taskText
     }
 
     console.log(taskText);
     taskList[stageIdx].tasks.push(newTask);
+    this.setState({stages: taskList});    
+  }
+
+  deleteTask = (taskId, stageId) => {
+    const taskList = [...this.state.stages];
+
+    delete taskList[stageId][taskId];
     this.setState({stages: taskList});
   }
 
   render() {
     const stages = this.state.stages.map((stage, idx) => (
       //  <Card className=''>
-          <Stage {...stage} key={idx} stageStageId={idx} 
-            onAddTask={(taskText, stageId) => { 
-              console.log(taskText); 
-              this.addTask(taskText, stageId) }
-            }/>
+          <Stage {...stage} 
+                  key={idx} stageId={stage.stageId} 
+                  onAddTask={(taskText, stageId) => { 
+                      console.log(taskText); 
+                      this.addTask(taskText, stageId); 
+                  }}
+                  onDeleteTask={(taskId) => {
+                      this.deleteTask(taskId);
+                  }}
+                  />
       //  </Card>
     ));
     return (

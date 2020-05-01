@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 
 import Task from "./Task";
-import AddTask from "./AddTask";
 import { Card, Button, InputGroup, Collapse } from "@blueprintjs/core";
 
-const Stage = ({ name, stageId, tasks, onAddTask }) => {
+const Stage = ({ name, stageId, tasks, onAddTask, onDeleteTask }) => {
   const [inputTask, setInputTask] = useState("");
   const [textVisibility, setTextVisibility] = useState(false);
   const stageTestId = `stage-${stageId}`;
@@ -18,7 +17,7 @@ const Stage = ({ name, stageId, tasks, onAddTask }) => {
   const taskList = tasks.map((task, idx) => (
      <div>
         <Task key={idx} name={task.taskText} />
-        <Button data-testid={deleteButtonTestId} text='X' />
+        <Button key={idx} data-testid={deleteButtonTestId} text='X' onClick={() => handleDeleteTask(idx, task.stageId)} />
      </div>
   ));  
 
@@ -26,6 +25,13 @@ const Stage = ({ name, stageId, tasks, onAddTask }) => {
      e.preventDefault();     
      onAddTask(inputTask, stageId);
      setTextVisibility(false);     
+  }
+
+  const handleDeleteTask = (taskId, stageId) => {     
+     return e => {
+         e.preventDefault();
+         onDeleteTask(taskId, stageId);
+     }     
   }
 
   return (
@@ -47,7 +53,7 @@ const Stage = ({ name, stageId, tasks, onAddTask }) => {
                     data-testid={addButtonTestId}
                     type='Submit'
                     name='inputTask'
-                    text='Add Task'
+                    text='Add'
                     onClick={handleAddTask}
                  />
                  <Button text='Cancel' onClick={(e) => setTextVisibility(false)} />
