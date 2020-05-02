@@ -1,0 +1,9 @@
+.taskItem {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.taskItem button {
+   margin-left: 10px;
+}
