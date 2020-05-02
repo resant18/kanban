@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import Task from "./Task";
 import { Card, Button, InputGroup, Collapse } from "@blueprintjs/core";
+import "./Stage.css";
 
 const Stage = ({ name, stageId, tasks, onAddTask, onDeleteTask }) => {
   const [inputTask, setInputTask] = useState("");
@@ -15,9 +16,14 @@ const Stage = ({ name, stageId, tasks, onAddTask, onDeleteTask }) => {
   const deleteButtonTestId = `${stageTestId}-delete`;
 
   const taskList = tasks.map((task, idx) => (
-     <div>
+     <div className="taskItem">
         <Task key={idx} name={task.taskText} />
-        <Button key={idx} data-testid={deleteButtonTestId} text='X' onClick={() => handleDeleteTask(idx, task.stageId)} />
+        <Button
+           key={idx}
+           data-testid={deleteButtonTestId}
+           text='X'
+           onClick={(e) => handleDeleteTask(idx, stageId)}         
+        />
      </div>
   ));  
 
@@ -27,11 +33,8 @@ const Stage = ({ name, stageId, tasks, onAddTask, onDeleteTask }) => {
      setTextVisibility(false);     
   }
 
-  const handleDeleteTask = (taskId, stageId) => {     
-     return e => {
-         e.preventDefault();
-         onDeleteTask(taskId, stageId);
-     }     
+  const handleDeleteTask = (taskId, stageId) => {                     
+      onDeleteTask(taskId, stageId);          
   }
 
   return (
@@ -61,11 +64,20 @@ const Stage = ({ name, stageId, tasks, onAddTask, onDeleteTask }) => {
            </div>
         ) : (
            <div>
-              <Button text='Add a Task' onClick={(e) => setTextVisibility(true)} />
-              
+              <Button text='Add a Task' onClick={(e) => setTextVisibility(true)} />              
               <div>
-               <Button data-testid={moveLeftButtonTestId} text='<<' />
-               <Button data-testid={moveRightButtonTestId} text='>>' />
+                 {
+                    stageId > 0 ?
+                     <Button data-testid={moveLeftButtonTestId} text='<<' />
+                     :
+                     null
+                 }
+                 {
+                    stageId < 3 ?
+                     <Button data-testid={moveRightButtonTestId} text='>>' />
+                     :
+                     null
+                 }                              
               </div>
            </div>
         )}
@@ -74,3 +86,5 @@ const Stage = ({ name, stageId, tasks, onAddTask, onDeleteTask }) => {
 };
 
 export default Stage;
+
+
