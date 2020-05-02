@@ -64,10 +64,9 @@ class App extends Component {
     this.setState({stages: taskList});    
   }
 
-  deleteTask = (taskId, stageId) => {
+  deleteTask = (taskId, stageId) => {    
     const taskList = [...this.state.stages];
-
-    delete taskList[stageId][taskId];
+    delete taskList[stageId].tasks[taskId];
     this.setState({stages: taskList});
   }
 
@@ -80,8 +79,8 @@ class App extends Component {
                       console.log(taskText); 
                       this.addTask(taskText, stageId); 
                   }}
-                  onDeleteTask={(taskId) => {
-                      this.deleteTask(taskId);
+                  onDeleteTask={(taskId, stageId) => {                    
+                      this.deleteTask(taskId, stageId);
                   }}
                   />
       //  </Card>
