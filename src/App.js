@@ -91,21 +91,23 @@ class App extends Component {
   render() {
     console.log(this.state.selectedTasks);
     const stages = this.state.stages.map((stage, idx) => (
-      //  <Card className=''>
-          <Stage {...stage} 
-                  key={idx} stageId={stage.stageId} 
-                  onMoveSelectedTask={(selectedTasks, selectedStageId, direction) => {
-                      this.moveSelectedTask(selectedTasks, selectedStageId, direction)
-                  }}
-                  onAddTask={(taskText, stageId) => { 
-                      console.log(taskText); 
-                      this.addTask(taskText, stageId); 
-                  }}
-                  onDeleteTask={(taskId, stageId) => {                    
-                      this.deleteTask(taskId, stageId);
-                  }}                     
+       <Card interactive={true} elevation='2'>
+          <Stage
+             {...stage}
+             key={idx}
+             stageId={stage.stageId}
+             onMoveSelectedTask={(selectedTasks, selectedStageId, direction) => {
+                this.moveSelectedTask(selectedTasks, selectedStageId, direction);
+             }}
+             onAddTask={(taskText, stageId) => {
+                console.log(taskText);
+                this.addTask(taskText, stageId);
+             }}
+             onDeleteTask={(taskId, stageId) => {
+                this.deleteTask(taskId, stageId);
+             }}
           />
-      //  </Card>
+       </Card>
     ));
     return (
        <div className='App'>

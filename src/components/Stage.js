@@ -53,44 +53,59 @@ const Stage = ({ name, stageId, tasks, onDeleteTask, onAddTask, onMoveSelectedTa
 
    return (
       <div data-testid={stageTestId} className='board'>
-         <strong>{name}</strong>
-         {taskList}
-         {textVisibility ? (
-            <div className='add-task-form'>
-               <form>
-                  <input
-                     data-testid={newTaskInputTestId}
-                     type='text'
-                     aria-label='Add a Task'
-                     name='inputTask'
-                     onChange={(e) => setInputTask(e.target.value)}
-                  />
-                  <br />
-                  <Button
-                     data-testid={addButtonTestId}
-                     type='Submit'
-                     name='inputTask'
-                     text='Add'
-                     onClick={handleAddTask}
-                  />
-                  <Button text='Cancel' onClick={(e) => setTextVisibility(false)} />
-               </form>
-            </div>
-         ) : (
-            <div>
-               <Button text='Add a Task' onClick={(e) => setTextVisibility(true)} />
-               <div>
-                  {stageId > 0 ? <Button data-testid={moveLeftButtonTestId} text='<<' onClick={(e) => {
-                     onMoveSelectedTask(selectedTasks, stageId, 'left');
-                     selectedTasks = [];
-                  }}/> : null}
-                  {stageId < 3 ? <Button data-testid={moveRightButtonTestId} text='>>' onClick={(e) => {
-                     onMoveSelectedTask(selectedTasks, stageId, 'right');
-                     selectedTasks = [];
-                  }}/> : null}
+         <div class='stage-title'>{name}</div>
+         <div className='top'>{taskList}</div>
+         <div className='bottom'>
+            {textVisibility ? (
+               <div className='add-task-form'>
+                  <form>
+                     <InputGroup
+                        data-testid={newTaskInputTestId}
+                        type='text'
+                        aria-label='Add a Task'
+                        placeholder='Task Description'
+                        name='inputTask'
+                        onChange={(e) => setInputTask(e.target.value)}
+                     />
+                     <br />
+                     <Button
+                        data-testid={addButtonTestId}
+                        type='Submit'
+                        name='inputTask'
+                        text='Add'
+                        onClick={handleAddTask}
+                     />
+                     <Button text='Cancel' onClick={(e) => setTextVisibility(false)} />
+                  </form>
                </div>
-            </div>
-         )}
+            ) : (
+               <div>
+                  <Button text='Add a Task' onClick={(e) => setTextVisibility(true)} />
+                  <div>
+                     {stageId > 0 ? (
+                        <Button
+                           data-testid={moveLeftButtonTestId}
+                           text='<<'
+                           onClick={(e) => {
+                              onMoveSelectedTask(selectedTasks, stageId, "left");
+                              selectedTasks = [];
+                           }}
+                        />
+                     ) : null}
+                     {stageId < 3 ? (
+                        <Button
+                           data-testid={moveRightButtonTestId}
+                           text='>>'
+                           onClick={(e) => {
+                              onMoveSelectedTask(selectedTasks, stageId, "right");
+                              selectedTasks = [];
+                           }}
+                        />
+                     ) : null}
+                  </div>
+               </div>
+            )}
+         </div>
       </div>
    );
 };

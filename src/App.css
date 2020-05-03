@@ -29,15 +29,21 @@
   to { transform: rotate(360deg); }
 }
 
-.stages-wrapper {
-  display: flex;  
-  width: 800px;
-  margin: 0 auto;
+.stage-title {
+  font-size: 1.2em;
+  font-weight: 700;
 }
 
-.board {
-    border: 1px solid #cccccc;
-    width: 200px;
-    margin-right: 20px;
-    background-color: #fbfafa;
+.stages-wrapper {
+  display: flex;  
+  width: 1200px;
+  margin: 0 auto;  
+}
+
+.bp3-card {
+  width: calc(25% - 20px);
+}
+
+.bp3-card {  
+  margin: 10px;
 }
