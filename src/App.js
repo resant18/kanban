@@ -18,27 +18,23 @@ class App extends Component {
         {
           stageId: 0,
           name: "Backlog",
-          tasks: [{
-            // taskId: 1,
+          tasks: [{            
             taskText: "Task 1"
-          }, {
-            // taskId: 2,
+          }, {            
             taskText: "Task 2"
           }]
         },
         {
           stageId: 1,
           name: "To Do",
-          tasks: [{
-            // taskId: 3,
+          tasks: [{            
             taskText: "Task 3"
           }]
         },
         {
           stageId: 2,
           name: "Ongoing",
-          tasks: [{
-            // taskId: 4,
+          tasks: [{            
             taskText: "Task 4"
           }]
         },
@@ -46,20 +42,22 @@ class App extends Component {
           stageId: 3,
           name: "Done",
           tasks: []
-        }]
-    };
+        }
+      ],      
+    };  
+    
+    let selectedTasks = [];
     
   }
 
   addTask = (taskText, stageIdx) => {
-    const taskList = [...this.state.stages]; // don't mutate 
+    //using spread to create separate reference object, to not mutate original state
+    const taskList = [...this.state.stages]; 
 
-    const newTask = {
-      // taskId: stageIdx,
+    const newTask = {      
       taskText: taskText
     }
-
-    console.log(taskText);
+    
     taskList[stageIdx].tasks.push(newTask);
     this.setState({stages: taskList});    
   }
@@ -70,19 +68,43 @@ class App extends Component {
     this.setState({stages: taskList});
   }
 
+  moveSelectedTask = (tasks, stageId, direction) => {    
+    const taskList = [...this.state.stages];
+    
+    for (let i = 0; i < tasks.length; i++) {
+      let taskId = tasks[i].idx;
+      const taskText = taskList[stageId].tasks[taskId].taskText;
+      const newTask = {
+         taskText,
+      };
+      delete taskList[stageId].tasks[taskId];
+      if (direction === "left") {
+         taskList[stageId - 1].tasks.push(newTask);
+      } else {
+         taskList[stageId + 1].tasks.push(newTask);
+      }
+    }
+    this.setState({stages: taskList});
+  }
+
+
   render() {
+    console.log(this.state.selectedTasks);
     const stages = this.state.stages.map((stage, idx) => (
       //  <Card className=''>
           <Stage {...stage} 
                   key={idx} stageId={stage.stageId} 
+                  onMoveSelectedTask={(selectedTasks, selectedStageId, direction) => {
+                      this.moveSelectedTask(selectedTasks, selectedStageId, direction)
+                  }}
                   onAddTask={(taskText, stageId) => { 
                       console.log(taskText); 
                       this.addTask(taskText, stageId); 
                   }}
                   onDeleteTask={(taskId, stageId) => {                    
                       this.deleteTask(taskId, stageId);
-                  }}
-                  />
+                  }}                     
+          />
       //  </Card>
     ));
     return (
